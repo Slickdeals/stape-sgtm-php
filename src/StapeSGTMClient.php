@@ -105,13 +105,13 @@ class StapeSGTMClient
             !preg_match('/^https:\/\//', $this->config['gtm_server_domain']) ||
             preg_match('/^\//', $this->config['gtm_server_domain'])
         ) {
-            throw new SGTMException(message: 'You did not fill in the variable gtm_server_domain. Example: https://gtm.stape.io');
+            throw new SGTMException(null, null, 'You did not fill in the variable gtm_server_domain. Example: https://gtm.stape.io');
         }
         if (
             !isset($this->config['request_path']) ||
             !preg_match('/\//', $this->config['request_path'])
         ) {
-            throw new SGTMException(message: 'You did not fill in the variable request_path. Example: /');
+            throw new SGTMException(null, null, 'You did not fill in the variable request_path. Example: /');
         }
     }
 }
