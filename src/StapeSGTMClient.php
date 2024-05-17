@@ -20,7 +20,7 @@ class StapeSGTMClient
         string $gtmServerDomain,
         string $requestPath = '/data',
         bool $richsstsse = false,
-        int $protocolVersion = 2,
+        int $protocolVersion = 2
     ) {
         $this->config = array(
             'gtm_server_domain' => $gtmServerDomain,
